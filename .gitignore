@@ -3,7 +3,9 @@
 data/minify/package-lock.json
 package-lock.json
 yarn.lock
-roms/
+*.gb
+*.gbc
+*.sfc
 data/emulator.min.js
 data/emulator.min.css
 data/cores

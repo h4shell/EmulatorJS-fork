@@ -13,7 +13,6 @@
     const folderPath = (path) => path.substring(0, path.length - path.split('/').pop().length);
     let scriptPath = (typeof window.EJS_pathtodata === "string") ? window.EJS_pathtodata : folderPath((new URL(document.currentScript.src)).pathname);
     if (!scriptPath.endsWith('/')) scriptPath+='/';
-    //console.log(scriptPath);
     function loadScript(file) {
         return new Promise(function (resolve, reject) {
             let script = document.createElement('script');
@@ -136,6 +135,7 @@
             config.langJson = {};
         }
     }
+
     
     window.EJS_emulator = new EmulatorJS(EJS_player, config);
     window.EJS_adBlocked = (url, del) => window.EJS_emulator.adBlocked(url, del);
